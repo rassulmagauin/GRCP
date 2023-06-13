@@ -15,6 +15,7 @@ const (
 )
 
 type server struct {
+	pb.UnimplementedMoneyTransactionServer
 }
 
 func (s *server) MakeTransaction(ctx context.Context, in *pb.TransactionRequest) (*pb.TransactionResponse, error) {
